@@ -57,6 +57,7 @@
 
       <div ref="actions" class="vs__actions">
         <button
+          v-if="!hideClearButton"
           v-show="showClearButton"
           ref="clearButton"
           :disabled="disabled"
@@ -153,7 +154,7 @@ export default {
   directives: { appendToBody },
 
   mixins: [pointerScroll, typeAheadPointer, ajax],
-  
+
   compatConfig: {
     MODE: 3,
   },
@@ -686,6 +687,15 @@ export default {
     uid: {
       type: [String, Number],
       default: () => uniqueId(),
+    },
+
+    /**
+     * Hide the clear button element all the time.
+     * @type {Boolean}
+     */
+    hideClearButton: {
+      type: Boolean,
+      default: false,
     },
   },
 

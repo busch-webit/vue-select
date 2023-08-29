@@ -329,6 +329,16 @@ getOptionLabel: {
 },
 ```
 
+## hideClearButton
+
+Should the default clear button element be hidden all the time?
+
+```js
+hideClearButton: {
+	type: Boolean,
+	default: false
+},
+```
 
 ## inputId
 

@@ -70,6 +70,8 @@
           <component :is="childComponents.Deselect" />
         </button>
 
+        <slot name="additional-actions" v-bind="scope.additionalActions" />
+
         <slot name="open-indicator" v-bind="scope.openIndicator">
           <component
             :is="childComponents.OpenIndicator"
@@ -826,6 +828,13 @@ export default {
         listFooter: listSlot,
         header: { ...listSlot, deselect: this.deselect },
         footer: { ...listSlot, deselect: this.deselect },
+        additionalActions: {
+          search: this.search,
+          loading: this.mutableLoading,
+          searching: this.searching,
+          filteredOptions: this.filteredOptions,
+          deselect: this.deselect,
+        },
       }
     },
 

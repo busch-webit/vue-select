@@ -18,6 +18,19 @@ Slots can be used to change the look and feel of the UI, or to simply swap out t
 
 <div class="slot-docs">
 
+## `additional-actions`
+
+Displayed before the open indicator for inserting custom actions.
+
+- `search {string}` - the current search query
+- `loading {boolean}` - if the component is in a loading state
+- `searching {boolean}` - is the component searching
+- `filteredOptions {array}` - options filtered by the search text
+- `deselect {function}` - function to deselect an option
+
+<SlotAdditionalActions />
+<<< @/.vuepress/components/SlotAdditionalActions.vue
+
 ## `footer` <Badge text="3.8.0+" />
 
 Displayed at the bottom of the component, below `.vs__dropdown-toggle`.

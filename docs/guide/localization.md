@@ -1,3 +1,17 @@
+## Locale Prop
+
+The `locale` prop accepts a function and should return an object of translated strings. The function
+receives the default english translations for the component. This allows you to override the whole
+object, or change just the values you need. The structure of the returned `locale` object is
+described below.
+
+## Locale Object
+
+The object returned from the locale prop requires specific keys to be set. Below is an example from
+the english locale that ships with Vue Select:
+
+<<< @/../src/locales/en.js 
+
 ## Right to Left
 
 Vue Select supports RTL using the standard HTML API using the `dir` prop.

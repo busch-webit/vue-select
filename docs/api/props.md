@@ -364,6 +364,26 @@ label: {
 ```
 
 
+## locale
+
+The locale function receives the default english translations object for the component. This allows
+you to override the whole object, or change just the values you need. Can be used to localize the
+component to different languages, or just replace text to your liking throughout the component.
+
+See [localization guide](/guide/localization.html) for more details and examples.
+
+```js
+locale: {
+  type: Function,
+  /**
+   * @return {Object}
+   * @param localeStrings
+   */
+  default: (localeStrings) => localeStrings,
+},
+```
+
+
 ## loading
 
  Show spinner if the component is in a loading state.
